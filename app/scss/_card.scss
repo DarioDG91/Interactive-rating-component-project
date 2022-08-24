@@ -1,0 +1,193 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .card {
+    background-color: $DarkBlue;
+    width: 86.5%;
+    max-width: 41rem;
+    border-radius: 1.5rem;
+    padding: 2.6rem;
+
+    @include breakpoint {
+      padding: 3rem;
+      border-radius: 3rem;
+    }
+
+    .star {
+      background-color: $MediumGrey;
+      width: 4rem;
+      height: 4rem;
+      padding: 1.2rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @include breakpoint {
+        width: 5rem;
+        height: 5rem;
+      }
+    }
+  }
+
+  .img {
+    width: 1.5rem;
+  }
+}
+
+.title {
+  font-size: 2.4rem;
+  color: $White;
+  margin-top: 2rem;
+
+  @include breakpoint{
+        margin-top: 3.3rem;
+        font-size: 2.77rem;
+  }
+
+}
+
+.text {
+  color: $LightGrey;
+  font-size: 1.35rem;
+  letter-spacing: 0.01rem;
+  line-height: 2.2rem;
+  margin-top: 1.2rem;
+
+  @include breakpoint{
+        margin-top: 1.1rem;
+        font-size: 1.5rem;
+        line-height: 2.3rem;
+  }
+
+}
+
+.rating-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  .rating-btn {
+    color: $LightGrey;
+    font-size: 1.3rem;
+    font-weight: 700;
+    background-color: $MediumGrey;
+    width: 4.1rem;
+    height: 4.1rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem;
+
+    @include breakpoint{
+        width: 5rem;
+        height: 5rem;
+        font-size: 1.6rem;
+    }
+
+
+    div {
+      // transform: translateY(20%); alternative
+
+      margin-top: 0.6rem;
+    }
+
+    &:hover {
+      background-color: $Orange;
+      cursor: pointer;
+
+      div {
+        color: $White;
+      }
+    }
+  }
+
+  .active {
+    background-color: $LightGrey;
+
+    div {
+      color: $White;
+    }
+  }
+}
+
+.submit-btn {
+  background-color: $Orange;
+  padding: 1.5rem;
+  margin-top: 2.5rem;
+  border-radius: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include breakpoint{
+        margin-top: 3rem;
+        padding: 1.3rem;
+  }
+
+
+  div {
+    color: $White;
+    text-transform: uppercase;
+    font-size: 1.45rem;
+    letter-spacing: 0.15rem;
+    transform: translateY(10%);
+
+    @include breakpoint{
+      letter-spacing: 0.25rem;
+
+    }
+  }
+
+  &:hover {
+    background-color: $White;
+    cursor: pointer;
+
+    div {
+      color: $Orange;
+      font-weight: 700;
+    }
+  }
+}
+
+.card-content-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  img {
+    width: 14.5rem;
+    margin-top: 1rem;
+  }
+
+  .result {
+    background-color: $MediumGrey;
+    padding: 0.7rem 1rem;
+    border-radius: 2rem;
+    margin-top: 2.5rem;
+    margin-bottom: 0.7rem;
+
+    div {
+      color: $Orange;
+      font-size: 1.4rem;
+
+      span {
+      }
+    }
+  }
+
+  .text {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.hide {
+  display: none;
+}
